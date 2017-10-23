@@ -1,6 +1,6 @@
-#2017
+**FTC 2017 Relic Recovery**
 
-##Summary##
+**Summary**
 This repository contains all electronic documentation of work done for FTC Team 11587's 2017-2018 season.  The repository contains the following sub-areas:
 
 * **Robot_Control_Code:** Control code for the robot and its subsystems.
