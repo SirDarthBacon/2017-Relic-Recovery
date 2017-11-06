@@ -5,4 +5,4 @@ This directory contains all files utilized to conduct CAD design of the Relic Re
 This directory contains the STEP and other CAD files used to design & assemble the robot.
 
 ## REV Robotics
-The team heavily utilized resources available at [link to REV Robotics](http://www.revrobotics.com/ftc/) to build this season's robot.
+The team heavily utilized resources available at [REV Robotics](http://www.revrobotics.com/ftc/) to build this season's robot.
