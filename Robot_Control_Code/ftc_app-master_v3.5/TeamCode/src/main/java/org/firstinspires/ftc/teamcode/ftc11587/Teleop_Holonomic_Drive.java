@@ -47,8 +47,8 @@ public class HolonomicDrive_Linear extends LinearOpMode {
          *
          *             FRONT
          *       1----------------2
-         *		LF                RF
-         *		\\				  //
+         *      LF                RF
+         *      \\				  //
          *		 |				  |
          *		 |				  |
          *		 |				  |
