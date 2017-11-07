@@ -15,4 +15,5 @@ This code is the primary code for the TeleOp portion of the Relic Recovery game.
 Several external resources were used as programming tutorial tools during the 2017-2018 season 
 
 *  IBM DeveloperWorks Java Tutorial [https://www.ibm.com/developerworks/java/tutorials/j-introtojava1/]
+*  Chief Delphi Mecanum Programming [https://www.chiefdelphi.com/media/papers/2390]
 
