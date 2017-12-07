@@ -37,11 +37,17 @@ public class HolonomicDrive_Linear extends LinearOpMode {
         lrMotor.setDirection(DcMotor.Direction.FORWARD);
         rrMotor.setDirection(DcMotor.Direction.FORWARD);
 
-        public void moveRobot(double angle, double speed, double rotation, double scale) {
+        /*Get inputs from gamepad1 to drive robot*/
+        double Speed = -gamepad1.left_stick_y;
+        double Angle = gamepad1.left_stick_x;
+        double Strafe = gamepad1.right_stick_x;
+        double MAX_SPEED = 1.0;
+
+        public void moveRobot(double Speed, double Angle, double Strafe, double MAX_SPEED) {
 
         /*
          * Math factors which control mecanum drive
-         *--Derived from Ian McInerney's mecanum drive overview for FRC Team 2022
+         *--Derived from Ian McInerney's mecanum drive overview for FRC Team 2022...see FTC Team 11587 GitHub repository for a copy
          *
          * ROBOT DRIVETRAIN CONFIGURATION
          *
@@ -60,38 +66,7 @@ public class HolonomicDrive_Linear extends LinearOpMode {
          *
          */
 
-        /*Adjust desired vector angle by PI/4 due to X-oriented drivetrain vs. cross*/
-        angle += PI/4;
 
-        /*Adjust this value to obtain desired/suitable rotation rate*/
-        rotation *= .5;
-
-        /*Without this adjustment, full forward speed would only be .707 of max due to 45 degree off drivetrain alignment*/
-        speed *= sqrt(2);
-
-        double sinAng = sin(angle);
-        double cosAng = cos(angle);
-
-        /*Create an array to store power values for all 4 motors*/
-
-        double motorpwr[] = new double[4];
-
-        motorpwr[0] = (speed * sinAng) + rotation;  //LF power multiplier
-        motorpwr[1] = (speed * cosAng) + rotation;  //RF power multiplier
-        motorpwr[2] = (speed * -cosAng) + rotation; //LR power multiplier
-        motorpwr[3] = (speed * -sinAng) + rotation; //RR power multiplier
-
-        /*Normalize motor power values to [-1,1]*/
-
-
-
-        /*Set power to individual motors*/
-
-        lfMotor.setPower(motorpwr[0] * scale);
-        rfMotor.setPower(motorpwr[1] * scale};
-        lrMotor.setPower(motorpwr[2] * scale);
-        rrMotor.setPower(motorpwr[3] * scale);
-        }
 
         /* Wait for the driver to press PLAY*/
         waitForStart();
