@@ -17,6 +17,10 @@ public class BasicHolonomicDrive extends LinearOpMode {
 	DcMotor lrMotor = null;
 	DcMotor rrMotor = null;
 
+	DcMotor armBaseMotor = null;
+	DcMotor firstArmMotor = null;
+	DcMotor secondArmMotor = null;
+
 	Servo clawServo = null;
 
 	@Override
